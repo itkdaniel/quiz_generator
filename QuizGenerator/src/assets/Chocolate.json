@@ -1,0 +1,35 @@
+{
+    "category": "Chocolate",
+    "questions": [
+        {
+            "question": "Where is 70% of the world's chocolate grown?",
+            "options": ["Mexico", "Brazil", "West Africa", "India"],
+            "answer": 2
+        },
+        {
+            "question": "How many cocoa beans does it take to produce one pound of chocolate?",
+            "options": ["500", "150", "270", "1200"],
+            "answer": 0
+        },
+        {
+            "question": "How long does it take for a cocoa tree to start producing beans?",
+            "options": ["4-5 years", "8-10 months", "6 months", "2-3 years"],
+            "answer": 0
+        },
+        {
+            "question": "On average, how many pounds of chocolate are purchased during the week of Valentines Day in the United States?",
+            "options": ["800 thousand", "58 million", "158 thousand", "1 million"],
+            "answer": 1
+        },
+        {
+            "question": "Which country imports the most chocolate?",
+            "options": ["France", "Germany", "Switzerland", "Belgium"],
+            "answer": 1
+        },
+        {
+            "question": "Which company came up with the heart-shaped chocolate box?",
+            "options": ["Nestle", "Hershey's", "Neuhaus", "Cadbury"],
+            "answer": 3
+        }
+    ]
+}

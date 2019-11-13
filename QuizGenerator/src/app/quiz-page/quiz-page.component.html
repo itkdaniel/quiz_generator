@@ -1,0 +1,59 @@
+<!-- {{category}} -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0">
+
+            <div class="form text-center m-0 d-flex flex-column justify-content-center">
+                <h1 class="h3 mb-3 font-weight-normal">Think You Know {{category}}?</h1>
+            	<div class="container rounded border border-success" style="margin-bottom: 20px; width: 50%; height: 85%;background: rgba(76, 175, 80, 0.5)" [@slide]="slide">
+                  <div class="text-center mb-4">
+                    <h4>Take This</h4>
+                  </div>
+                  <small class="text-danger">{{error}}</small>
+                  <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+                    <div formArrayName="answers">
+                        <div style="text-align: left" *ngFor="let question of quiz.questions; index as i">
+                            <h6>{{i+1}}. {{question.question}}</h6>
+                            <div *ngFor="let option of question.options; index as j">
+                              <div class="radio" >
+                                <label><input type="radio" formControlName="{{i}}" value="{{j}}">{{option}}</label>
+                              </div>
+                            </div>
+                      </div>
+                    </div>
+                        <button type="submit" class="btn btn-dark mb-1" value="submit">
+                            Submit
+                        </button>
+                  </form>
+              </div>
+            </div>
+        </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <form>
+      <label class="label" for="question1">This is the first question</label>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="question1" value="Answer1">
+          <label class="form-check-label" for="exampleRadios1">
+            Answer1
+          </label>
+
+      </div>
+
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="question1" value="Answer2">
+          <label class="form-check-label" for="exampleRadios1">
+            Answer2
+          </label>
+
+      </div>
+
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="question1" value="Answer3">
+          <label class="form-check-label" for="exampleRadios1">
+            Answer3
+          </label>
+      </div>
+    </form>
+  </div> -->

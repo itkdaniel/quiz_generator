@@ -1,0 +1,30 @@
+{
+    "category": "Basketball",
+    "questions": [
+        {
+            "question": "Why are the Los Angeles Lakers called the Lakers?",
+            "options": ["Their founder was named Lake", "Their first arena was on a lake", "They originally came from Minnesota, the 'Land of 10,000 Lakes'", "No one knows"],
+            "answer": 2
+        },
+        {
+            "question": "What is depicted on the logo of the Golden State Warriors?",
+            "options": ["A bridge", "A spearhead", "A city skyline", "A basketball"],
+            "answer": 0
+        },
+        {
+            "question": "Who was the shortest player to win an MVP?",
+            "options": ["Steve Nash", "Charles Barkle", "Allen Iverson", "Spud Webb"],
+            "answer": 2
+        },
+        {
+            "question": "When Kevin Durant won the MVP award in 2014, he said someone else was 'da real MVP'. Who was it?",
+            "options": ["Russell Westbrook", "Lebron James", "His mom", "Barack Obama"],
+            "answer": 3
+        },
+        {
+            "question": "Which of the following was never a teammate of Michael Jordan?",
+            "options": ["Steve Kerr", "Toni Kukoč", "Dennis Rodman", "Grant Hill"],
+            "answer": 3
+        }
+    ]
+}

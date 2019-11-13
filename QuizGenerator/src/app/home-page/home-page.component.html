@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="form min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+                <h1 class="h3 mb-3 font-weight-normal">Quiz Categories</h1>
+            	<div class="container-fluid rounded border border-success" style="width: 50%; height: 85%;background: rgba(76, 175, 80, 0.5)" [@slide]="slide">
+                  <div class="text-center mb-4">
+                    <!-- <h1 class="h3 mb-3 font-weight-normal">Quiz Categories</h1> -->
+                    <h4 style="margin-top: 20px">Take a Quiz</h4>
+                    <div class='text-danger' [hidden]="isShow">Please select a category</div>
+                    <form (ngSubmit)='onSubmit()'>
+                        <div class="form-group">
+                          <label for="categories">Categories</label>
+                          <select class="form-control" name="choose" id="choose" [(ngModel)]="category">
+                            <option [hidden]="choose.untouched">Select a category</option>
+                            <option *ngFor="let category of categories">{{category}}</option>
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-dark" value="takeQuiz" style="margin-bottom: 5%" [@shake]="shake" (@shake.done)="setToDefault()">
+                            Take Quiz
+                        </button>
+                      </form>
+                      <!-- {{categories}} -->
+                  </div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

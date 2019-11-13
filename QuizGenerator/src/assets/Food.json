@@ -1,0 +1,30 @@
+{
+    "category": "Food",
+    "questions": [
+        {
+            "question": "Which of the following vegetables is not one of the ingredients of V-8 juice?",
+            "options": ["Beet", "Carrot", "Spinach", "Cabbage"],
+            "answer": 3
+        },
+        {
+            "question": "What country produces the most potatoes?",
+            "options": ["China", "United States", "Ireland", "Russia"],
+            "answer": 0
+        },
+        {
+            "question": "In the drink called a zombie, what is the main alcoholic ingredient?",
+            "options": ["Beer", "Brandy", "Rum", "Whiskey"],
+            "answer": 2
+        },
+        {
+            "question": "In the United States, about how much beer does the average person drink each year?",
+            "options": ["24 pints", "24 quarts", "24 gallons", "24 liters"],
+            "answer": 2
+        },
+        {
+            "question": "Europeans first learned of chocolate from whom?",
+            "options": ["Africans", "Aztecs", "French", "Chuck Norris"],
+            "answer": 3
+        }
+    ]
+}

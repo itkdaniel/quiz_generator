@@ -1,0 +1,6 @@
+.bg-snow {
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Albigna01.PNG");
+  /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Albigna01.PNG"); */
+  background-size: cover;
+  /* opacity: .5; */
+}

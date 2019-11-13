@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <!-- <h1 class="text-danger text-center" *ngIf="this.shake== 'invalid' ">PUT THE RIGHT STUFF</h1> -->
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="form text-center m-0 d-flex justify-content-center" style="margin-top: 7% !important">
+              <div class="container-fluid rounded border border-success bg-snow" style="width: 50%; height: 85%;" [@fade]="fade">
+                <!-- [@shake]="shake" (@shake.done)="setToDefault() -->
+                <!-- background: rgba(76, 175, 80, 0.5); -->
+
+					<form [formGroup]="loginForm" (ngSubmit)='onSubmit()' #form>
+					  <div class="text-center mb-4">
+				        <img class="mb-4">
+				        <h1 class="h3 mb-3 font-weight-normal">Quiz Login</h1>
+				        <p>Take a Quiz</p>
+            </div>
+            <small class="text-danger" *ngIf="show == true">Incorrect Username or Password</small>
+            <small class="text-danger" *ngIf="showPasswordError == true">Password is required</small>
+            <small class="text-danger" *ngIf="showLoginError == true">Username and Password is required</small>
+
+				  	  <div class="form-group">
+				  	  	<label for="username"><h5>Username:</h5></label>
+				  	  	<input class="form-control" type="text" name="username" formControlName="username" [class.is-invalid]="username.invalid && username.touched">
+				  	  	<div [hidden]="username.valid || username.untouched">
+				  	  		<p class="text-danger">Username is required</p>
+						</div>
+				      </div>
+				      <div class="form-group">
+				      	<label for="password"><h5>Password:</h5></label>
+				      	<input class="form-control" type="password" name="password" formControlName="password" [class.is-invalid]="password.invalid && password.touched">
+				      </div>
+				      <div [hidden]="password.valid || password.untouched">
+				      	<p class="text-danger">Password is required</p>
+				      </div>
+
+				      <button type="submit" class="btn btn-dark" value="login" style="margin-bottom: 5%" [@shake]="shake" (@shake.done)="setToDefault()">
+				      	Login
+				      </button>
+				    </form>
+
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

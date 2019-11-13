@@ -1,0 +1,31 @@
+
+{
+    "category": "Animals",
+    "questions": [
+        {
+            "question": "“Dazzle” is a term used for a group of what type of animal?",
+            "options": ["Giraffe", "Donkey", "Zebra", "Monkey"],
+            "answer": 2
+        },
+        {
+            "question": "What semi-aquatic, egg laying mammal, is native to Australia and Tasmania?",
+            "options": ["The platypus", "Beaver", "Hippopotamus", "Otter"],
+            "answer": 0
+        },
+        {
+            "question": "Ambergris is a waxy substance that originates as a secretion from what aquatic animal?",
+            "options": ["Dolphin", "Sperm Whale", "Turtle", "Starfish"],
+            "answer": 1
+        },
+        {
+            "question": "What type of animal is a group of Mob, troop or court?",
+            "options": ["Lions", "Fish", "Tigers", "Kangaroos"],
+            "answer": 3
+        },
+        {
+            "question": "What group of animals are reffered to as a 'murder'?",
+            "options": ["Crows", "Hyenas", "Chimapanzees", "Humans"],
+            "answer": 0
+        }
+    ]
+}
