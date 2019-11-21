@@ -3,6 +3,7 @@ import { QuizServiceService } from '../services/quiz-service.service';
 import { trigger, state, transition, style, animate, keyframes } from '@angular/animations';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginServiceService } from '../services/login-service.service';
 
 @Component({
   selector: 'app-home-page',
@@ -40,7 +41,12 @@ export class HomePageComponent implements OnInit {
   isShow = true;
   categories: any;
   category = 'Select a category';
-  constructor(private fb: FormBuilder, private quiz: QuizServiceService, private route: Router) {
+  constructor(private fb: FormBuilder, private quiz: QuizServiceService, private login: LoginServiceService, private route: Router) {
+
+      if (this.login.getLoggedInUser() == "") {
+        console.log("data: " + this.login.getLoggedInUser());
+        route.navigate(['/login']);
+      }
       this.quiz.getCategories().subscribe(obj => {
       this.categories = obj;
     });

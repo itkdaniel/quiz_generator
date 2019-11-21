@@ -5,6 +5,7 @@ import { trigger, state, transition, style, animate, keyframes } from '@angular/
 import { QuizModel, Question } from '../models/quiz-model';
 import { map, flatMap } from 'rxjs/operators';
 import { FormGroup, FormBuilder, FormArray, FormControl, Validators } from '@angular/forms';
+import { LoginServiceService } from '../services/login-service.service';
 
 @Component({
   selector: 'app-quiz-page',
@@ -37,19 +38,25 @@ export class QuizPageComponent implements OnInit {
   };
 
   constructor(private fb: FormBuilder, private route: Router, private activeRoute: ActivatedRoute,
-              private quizService: QuizServiceService) {
-    this.activeRoute.paramMap.subscribe(params => this.category = params.get('category'));
-    console.log(this.category);
-    this.activeRoute.paramMap.pipe(
-      map(params => params.get('category')),
-      flatMap(category => this.quizService.getQuestions(category))
-    ).subscribe(data => {
-      this.quiz = data;
-      console.log("quiz questions: " + this.quiz.questions);
-      for (let i = 0; i < this.quiz.questions.length; i++) {
-        this.quizAnswers.push(new FormControl ('', Validators.required));
-      }
-    });
+              private quizService: QuizServiceService, private login: LoginServiceService) {
+    if (this.login.getLoggedInUser() == "") {
+      console.log("data: " + this.login.getLoggedInUser());
+      route.navigate(['/login']);
+    } else {
+      this.activeRoute.paramMap.subscribe(params => this.category = params.get('category'));
+      console.log(this.category);
+      this.activeRoute.paramMap.pipe(
+        map(params => params.get('category')),
+        flatMap(category => this.quizService.getQuestions(category))
+      ).subscribe(data => {
+        this.quiz = data;
+        console.log("quiz questions: " + this.quiz.questions);
+        for (let i = 0; i < this.quiz.questions.length; i++) {
+          this.quizAnswers.push(new FormControl ('', Validators.required));
+        }
+      });
+    }
+
   }
 
 

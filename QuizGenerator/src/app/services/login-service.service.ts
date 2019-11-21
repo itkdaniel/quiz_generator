@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class LoginServiceService {
 
   constructor(private http: HttpClient) { }
-  private _loggedInUser?: any;
+  private _loggedInUser?: any = "";
   userExists;
 
   get loggedInUser() {
@@ -19,6 +19,10 @@ export class LoginServiceService {
 
   setusernull() {
     this._loggedInUser = null;
+  }
+
+  getLoggedInUser() {
+    return this._loggedInUser;
   }
 
   getusers() {

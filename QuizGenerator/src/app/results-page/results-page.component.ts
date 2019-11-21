@@ -35,7 +35,10 @@ export class ResultsPageComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private route: Router , private activeRoute: ActivatedRoute,
               private quizService: QuizServiceService,  public user: LoginServiceService) {
-
+    if (this.user.getLoggedInUser() == "") {
+      console.log("data: " + this.user.getLoggedInUser());
+      route.navigate(['/login']);
+    }
     // this.correct = this.quizService.getFromSession('1');
     // this.incorrect = this.quizService.getFromSession('0');
 
